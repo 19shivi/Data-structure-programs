@@ -69,11 +69,11 @@ void postorder(struct node*temp)
     postorder(temp->right);
 
 
-        if(((height(temp->left,0))-(height(temp->right,0)))>1)
+        if(((height(temp->left,0))-(height(temp->right,0)))<-1)
     {    printf(" BALANCE FACTOR:%d\n",((height(temp->left,0))-(height(temp->right,0))));
         printf("%d node is imbalance right right rotation is needed\n",temp->data);
     }
-    if(((height(temp->left,0))-(height(temp->right,0)))<-1)
+    if(((height(temp->left,0))-(height(temp->right,0)))>1)
     {    printf("BALANCE FACTOR:%d\n",((height(temp->left,0))-(height(temp->right,0))));
         printf("%d node is imbalance left left rotation is needed\n",temp->data);
     }
